@@ -34,19 +34,19 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %} activate {% endif %}" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %} activate {% endif %}" href="#">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %} activate {% endif %}" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %} activate {% endif %}" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %} activate {% endif %}" href="#">Skills</a>
                     </li>
                 </ul>
             </div>
