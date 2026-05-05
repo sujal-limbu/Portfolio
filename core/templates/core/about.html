@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="min-vh-100 d-flex align-items-center" style="background-color: #1c2333;">
+    <div class="container py-5">
+
+        <!-- Page Header -->
+        <div class="text-center mb-5">
+            <p class="text-success fw-semibold mb-1" style="letter-spacing: 2px; font-size: 1rem;">GET TO KNOW ME</p>
+            <h1 class="display-5 fw-bold text-white">About <span class="text-success">Me</span></h1>
+            <div class="mx-auto mt-2" style="width: 60px; height: 3px; background-color: #198754; border-radius: 2px;"></div>
+        </div>
+
+        <!-- Main Content Row -->
+        <div class="row align-items-center g-5">
+
+            <!-- Left: Profile Image -->
+            <div class="col-lg-4 col-md-12 text-center">
+                <img src="{% static 'images/Me.jpeg' %}" alt="Sujal Limbu"
+                    class="rounded-circle"
+                    style="width: 280px; height: 280px; object-fit: cover; border: 4px solid #198754; box-shadow: 0 0 30px rgba(25, 135, 84, 0.25);">
+
+                <!-- Social Links -->
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="https://github.com/sujal-limbu" class="text-success fs-5" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sujal-limbu/" class="text-success fs-5" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/sujallimbu007" class="text-success fs-5" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Right: About Info -->
+            <div class="col-lg-8 col-md-12 text-white">
+                <h2 class="fw-bold mb-1">Sujal Limbu</h2>
+                <h5 class="text-success mb-3">Software Developer</h5>
+                <p class="text-secondary mb-4" style="line-height: 1.9; font-size: 1.05rem;">
+                    I'm a passionate software developer who loves building clean, efficient, and user-friendly applications.
+                    I enjoy turning complex problems into simple, elegant solutions through code.
+                    My focus is on writing maintainable code and delivering meaningful user experiences.
+                </p>
+
+                <!-- Info Grid -->
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="text-success"><i class="fas fa-user"></i></span>
+                            <div>
+                                <small class="text-secondary d-block" style="letter-spacing: 1px; font-size: 0.75rem;">NAME</small>
+                                <span class="fw-semibold">Sujal Limbu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="text-success"><i class="fas fa-envelope"></i></span>
+                            <div>
+                                <small class="text-secondary d-block" style="letter-spacing: 1px; font-size: 0.75rem;">EMAIL</small>
+                                <span class="fw-semibold">sujallimbu31@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="text-success"><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <small class="text-secondary d-block" style="letter-spacing: 1px; font-size: 0.75rem;">LOCATION</small> <span class="fw-semibold">Kathmandu, Nepal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="text-success"><i class="fas fa-graduation-cap"></i></span>
+                            <div>
+                                <small class="text-secondary d-block" style="letter-spacing: 1px; font-size: 0.75rem;">DEGREE</small>
+                                <span class="fw-semibold">BSc. Computer Science and Information Technology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <h6 class="text-success fw-semibold mb-3" style="letter-spacing: 2px; font-size: 0.85rem;">TECH STACK</h6>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    {% for skill in skills %}
+                    <span class="badge px-3 py-2 fw-normal"
+                        style="background-color: rgba(25,135,84,0.15); color: #4fd98a; border: 1px solid rgba(25,135,84,0.35); border-radius: 20px; font-size: 0.85rem;">
+                        {{ skill }}
+                    </span>
+                    {% endfor %}
+                </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
